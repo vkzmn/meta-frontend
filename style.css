@@ -1,0 +1,472 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: hsl(9, 58%, 56%);
+  --primary-drk: hsl(9, 58%, 46%);
+  --secondary: hsl(26, 55%, 89%);
+  --border-radius: 0.5rem;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  max-width: 1300px;
+  margin: 0 auto;
+  background-color: rgb(255, 235, 235);
+  background-color: #fff;
+}
+
+main {
+  padding: 0 20px;
+}
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.img-fit {
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav li {
+  position: relative;
+  list-style: none;
+  margin: 0.8rem;
+  display: inline-block;
+}
+
+nav ul li a {
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  font-weight: 600;
+  color: var(--primary-drk);
+  transition: text-shadow 0.2s ease;
+}
+
+nav ul li a::before {
+  position: absolute;
+  z-index: -2;
+  top: -10px;
+  left: -10px;
+  content: "";
+  width: 0px;
+  height: 4px;
+  background-color: var(--secondary);
+  transition: width 0.2s ease-in;
+}
+
+nav ul li a:hover {
+  color: var(--primary);
+  text-shadow: 5px 5px var(--secondary);
+}
+
+nav ul li a:hover::before {
+  width: 95%;
+}
+
+.main_logo {
+  display: flex;
+  margin: 10px auto;
+  width: 250px;
+}
+
+.hero {
+  width: 100%;
+  height: auto;
+  padding: 6rem;
+  border-radius: var(--border-radius);
+  background: rgb(217, 222, 218) url("assets/hair_style_hero.png") no-repeat 97%
+    bottom;
+  background-size: contain;
+  transition: background-color 0.2s ease-in;
+}
+
+.hero-text {
+  max-width: 70%;
+}
+
+.hero-text h1 {
+  font-size: 4.5rem;
+  line-height: 0.9;
+  letter-spacing: -0.1rem;
+  font-weight: 600;
+  margin-bottom: 45px;
+  transition: color 0.2s ease-in;
+}
+
+.hero-text em {
+  display: block;
+  font-weight: 800;
+  font-size: 6rem;
+  font-style: normal;
+  color: var(--primary-drk);
+  text-transform: uppercase;
+  transition: color 0.2s ease-in;
+}
+
+.hero-text p {
+  font-size: 1.3rem;
+  margin-bottom: 3px;
+}
+
+button {
+  display: block;
+  border: 0;
+  font-size: 1rem;
+  color: white;
+  background-color: var(--primary);
+  letter-spacing: 0.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  transition: color 0.15s ease-in, background-color 0.15s ease-in;
+}
+
+button:hover {
+  color: var(--primary);
+  background-color: white;
+  cursor: pointer;
+}
+
+.hero:hover {
+  background: var(--primary-drk) url("assets/hair_style_hero.png") no-repeat 97%
+    bottom;
+  background-size: contain;
+}
+
+.hero:hover .hero-text h1 {
+  color: white;
+}
+
+.hero:hover .hero-text em {
+  color: black;
+}
+
+.hero:hover .hero-text p {
+  color: white;
+}
+
+section {
+  display: flex;
+}
+
+article {
+  flex: 1;
+}
+
+.featured {
+  margin: 1.5rem 0;
+}
+
+.featured article {
+  border-radius: var(--border-radius);
+}
+
+.featured article:not(:last-child) {
+  margin-right: 1rem;
+}
+
+h2 {
+  font-size: 2.1rem;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.coloring {
+  width: 100%;
+  height: auto;
+  padding: 1.7rem;
+  border-radius: var(--border-radius);
+  background: #637684 url("assets/expressive_coloring.png") no-repeat right
+    bottom;
+  background-size: contain;
+  transition: background-color 0.2s ease-in;
+}
+
+.coloring h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.coloring p {
+  max-width: 60%;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.coloring:hover {
+  background-color: #e3b434;
+}
+
+.coloring:hover p {
+  color: black;
+}
+
+/* ---makeup section---- */
+
+.makeup {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  color: #56371b;
+  transition: color 0.15s ease-in, background-color 0.15s ease-in;
+}
+
+.makeup .img-container {
+  width: 100%;
+  height: 190px;
+  overflow: hidden;
+}
+
+.makeup img {
+  width: 100%;
+  height: 190px;
+  transition: all 0.2s ease-in;
+}
+
+.makeup:hover img {
+  transform: scale(1.05);
+}
+
+.makeup .text {
+  padding: 1rem;
+}
+
+.makeup h2 {
+  margin-bottom: 10px;
+}
+
+/* ---nails section---- */
+
+.nails {
+  background-color: var(--secondary);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  color: #56371b;
+  transition: color 0.15s ease-in, background-color 0.15s ease-in;
+}
+
+.nails h2 {
+  margin-bottom: 10px;
+  color: #b6814f;
+}
+
+.nails .img-container {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.nails img {
+  width: 100%;
+  height: 180px;
+  transition: all 0.2s ease-in;
+}
+
+.nails div.text {
+  padding: 1.5rem 1.6rem;
+}
+
+.nails:hover {
+  background-color: #b6814f;
+  color: var(--secondary);
+}
+
+.nails:hover h2 {
+  color: white;
+}
+
+.nails:hover img {
+  transform: scale(1.05);
+}
+
+/* ---footer--- */
+
+footer {
+  display: flex;
+  padding: 4rem 2rem;
+  margin: 0 20px 30px 20px;
+  color: white;
+  background-color: var(--primary-drk);
+  border-radius: var(--border-radius);
+}
+
+footer div {
+  flex: 1;
+}
+
+footer .left {
+  text-align: right;
+  padding-right: 10px;
+}
+
+footer p {
+  padding-top: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.logo-footer {
+  text-align: right;
+  width: 200px;
+}
+
+.img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+/* ---media queries--- */
+
+@media (max-width: 1140px) {
+  .hero {
+    padding: 9vw;
+  }
+
+  .hero-text h1 {
+    font-size: 6.2vw;
+  }
+
+  .hero-text em {
+    font-size: 8.3vw;
+  }
+
+  .coloring {
+    background: #637684 url("assets/expressive_coloring.png") no-repeat 150%
+      bottom;
+    background-size: contain;
+  }
+}
+
+@media (max-width: 990px) {
+  .hero {
+    padding: 7vw;
+    background: rgb(217, 222, 218) url("assets/hair_style_hero.png") no-repeat
+      110% bottom;
+    background-size: contain;
+  }
+
+  .hero:hover {
+    background: var(--primary-drk) url("assets/hair_style_hero.png") no-repeat
+      110% bottom;
+    background-size: contain;
+  }
+
+  .hero-text h1 {
+    margin-bottom: 4.5vw;
+  }
+
+  .mt-40 {
+    margin-top: 4.5vw;
+  }
+
+  .hero-text p {
+    font-size: 1.2rem;
+  }
+
+  .coloring {
+    background: #637684 url("assets/expressive_coloring.png") no-repeat 10vw
+      bottom;
+    background-size: contain;
+  }
+
+  .coloring p {
+    max-width: 22vw;
+  }
+
+  h2 {
+    font-size: 3.5vw;
+  }
+
+  .nails div.text {
+    padding: 1.2rem;
+  }
+
+  nav ul li a {
+    font-size: 1.2rem;
+  }
+
+  .nails img,
+  .nails .img-container {
+    height: 19vw;
+  }
+}
+
+@media (max-width: 650px) {
+  nav ul li a {
+    font-size: 3vw;
+  }
+
+  nav li {
+    margin: 0.2rem;
+  }
+  .logo-footer {
+    width: 140px;
+  }
+
+  footer p {
+    padding-top: 0rem;
+    font-size: 0.9rem;
+  }
+
+  .makeup .text {
+    padding: 0.2rem;
+    padding-bottom: 1rem;
+  }
+
+  .hero {
+    padding: 7vw;
+
+    background: rgb(217, 222, 218) url("assets/hair_style_hero.png") no-repeat
+      130% bottom;
+    background-size: contain;
+  }
+
+  .hero:hover {
+    background: var(--primary-drk) url("assets/hair_style_hero.png") no-repeat
+      130% bottom;
+    background-size: contain;
+  }
+
+  .hero-text h1 {
+    font-size: 6.5vw;
+  }
+
+  .hero-text em {
+    font-size: 8.5vw;
+  }
+
+  .hero-text p {
+    font-size: 1.1rem;
+  }
+}
